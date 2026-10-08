@@ -52,7 +52,7 @@ export function LoginForm() {
       )}
       <button
         disabled={busy || !password}
-        className="w-full rounded-xl bg-ink px-4 py-3 text-sm font-semibold text-canvas transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-40"
+        className="w-full rounded-xl bg-ink px-4 py-3 text-sm font-semibold text-canvas transition hover:bg-accent disabled:cursor-not-allowed disabled:opacity-40"
       >
         {busy ? "Checking…" : "Continue"}
       </button>

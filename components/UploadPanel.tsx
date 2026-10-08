@@ -99,7 +99,7 @@ export function UploadPanel() {
               </button>
               <Link
                 href="/insights"
-                className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-white transition hover:bg-accent-deep"
+                className="rounded-full bg-accent px-5 py-2 text-sm font-semibold text-canvas transition hover:bg-accent-deep"
               >
                 View insights →
               </Link>

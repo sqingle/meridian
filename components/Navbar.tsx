@@ -22,10 +22,11 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-canvas/80 backdrop-blur-xl">
+      <div className="stripes h-[3px]" />
       <div className="mx-auto flex h-16 max-w-[1400px] items-center gap-3 px-4 sm:gap-6 sm:px-6">
         <Link href="/" className="flex items-center gap-2.5">
           <Logo />
-          <span className="hidden font-semibold tracking-tight sm:inline">Meridian</span>
+          <span className="hidden text-sm font-semibold uppercase tracking-[0.22em] sm:inline">Meridian</span>
         </Link>
 
         {shared ? (

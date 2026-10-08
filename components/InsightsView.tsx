@@ -12,7 +12,7 @@ export function InsightsView() {
       <div className="mx-auto mt-20 max-w-md rounded-3xl border border-line bg-surface p-10 text-center">
         <h1 className="text-xl font-semibold">No data yet</h1>
         <p className="mt-2 text-sm text-mute">Upload a sales CSV to see revenue, rep and time-to-close insights.</p>
-        <Link href="/" className="mt-6 inline-block rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white hover:bg-accent-deep">
+        <Link href="/" className="mt-6 inline-block rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-canvas hover:bg-accent-deep">
           Upload CSV
         </Link>
       </div>

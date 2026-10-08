@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { money, type RevenuePoint } from "@/lib/analytics";
 
-export const PALETTE = ["#5b8cff", "#34c77b", "#f5782a", "#e9c53c", "#a283f2", "#5d5d67"];
+export const PALETTE = ["#2fd8e8", "#c45cff", "#ff5a4d", "#3b8bff", "#ff7ab8", "#4e6c88"];
 
 /** Round the axis so its four gridlines land on clean values ($1M, $2M, ...). */
 function niceAxis(v: number) {
@@ -50,7 +50,7 @@ export function BarChart({ points }: { points: RevenuePoint[] }) {
               <div key={p.key} className="relative flex h-full flex-1 items-end" onMouseEnter={() => setHover(i)}>
                 <div
                   className={`relative w-full rounded-xl border transition-all duration-200 ${
-                    on ? "border-accent/60 bg-gradient-to-b from-accent to-accent-deep shadow-[0_0_28px_-4px_rgb(91_140_255/0.55)]" : "hatch border-line"
+                    on ? "border-accent/60 bg-gradient-to-b from-accent to-accent-deep shadow-[0_0_28px_-4px_rgb(47_216_232/0.5)]" : "hatch border-line"
                   }`}
                   style={{ height: `${h}%`, minHeight: p.value ? 8 : 0 }}
                 >
@@ -58,11 +58,11 @@ export function BarChart({ points }: { points: RevenuePoint[] }) {
                   {on && p.value > 0 && (
                     <>
                       {delta !== null && (
-                        <span className="absolute -top-1 left-1/2 z-10 -translate-x-1/2 -translate-y-full whitespace-nowrap rounded-full bg-accent px-2 py-0.5 text-[11px] font-semibold text-white">
+                        <span className="absolute -top-1 left-1/2 z-10 -translate-x-1/2 -translate-y-full whitespace-nowrap rounded-full bg-accent px-2 py-0.5 text-[11px] font-semibold text-canvas">
                           {delta >= 0 ? "▲" : "▼"} {Math.abs(delta * 100).toFixed(0)}%
                         </span>
                       )}
-                      <span className="absolute inset-x-0 bottom-2 text-center text-[11px] font-semibold text-white">
+                      <span className="absolute inset-x-0 bottom-2 text-center text-[11px] font-semibold text-canvas">
                         {money(p.value, true)}
                       </span>
                     </>
