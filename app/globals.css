@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Palette sampled from the Meridian branding: near-black canvas, raised charcoal cards,
+   cobalt primary accent, with green / orange / gold / violet for categorical data. */
+@theme {
+  --color-canvas: #08080a;
+  --color-surface: #101013;
+  --color-surface-2: #17171b;
+  --color-surface-3: #1e1e23;
+  --color-line: #26262c;
+  --color-line-strong: #34343c;
+  --color-ink: #f3f3f5;
+  --color-mute: #8d8d98;
+  --color-faint: #5d5d67;
+  --color-accent: #5b8cff;
+  --color-accent-deep: #3a63d8;
+  --color-good: #34c77b;
+  --color-warn: #f5782a;
+  --color-gold: #e9c53c;
+  --color-violet: #a283f2;
+  --color-bad: #f0526a;
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+html { color-scheme: dark; }
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* diagonal hatch used on idle chart bars, per branding */
+.hatch {
+  background-color: var(--color-surface-2);
+  background-image: repeating-linear-gradient(135deg, rgb(255 255 255 / 0.035) 0 2px, transparent 2px 6px);
+}
+
+::selection { background: rgb(91 140 255 / 0.35); }
+
+.scroll-thin::-webkit-scrollbar { height: 8px; width: 8px; }
+.scroll-thin::-webkit-scrollbar-thumb { background: var(--color-line-strong); border-radius: 8px; }
